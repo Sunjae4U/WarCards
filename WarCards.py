@@ -7,7 +7,6 @@ import tkinter as tk
 from tkinter import font as tkfont
 import random
 
-# ─── Card Data ────────────────────────────────────────────────────────────────
 
 SUITS = ['S', 'H', 'D', 'C']  # Spades, Hearts, Diamonds, Clubs
 SUIT_SYMBOLS = {'S': 'Spades', 'H': 'Hearts', 'D': 'Diamonds', 'C': 'Clubs'}
@@ -37,7 +36,6 @@ def card_value(card):
     return RANK_VALUES[card[0]]
 
 
-# ─── Game Logic ───────────────────────────────────────────────────────────────
 
 class WarGame:
     def __init__(self):
@@ -127,7 +125,6 @@ class WarGame:
         return [len(h) for h in self.hands]
 
 
-# ─── GUI ──────────────────────────────────────────────────────────────────────
 
 class WarApp(tk.Tk):
     def __init__(self):
@@ -264,7 +261,6 @@ class WarApp(tk.Tk):
                   padx=14, pady=6, cursor='hand2',
                   command=self._new_game).pack(side='left', padx=5)
 
-    # ── Helpers ───────────────────────────────────────────────────────────────
 
     def _card_display(self, card):
         """Return (text, fg_color) for a card label."""
@@ -343,7 +339,6 @@ class WarApp(tk.Tk):
         else:
             return [None, None, None, None], None, []
 
-    # ── Actions ───────────────────────────────────────────────────────────────
 
     def _next_round(self):
         if self.game.game_over:
@@ -424,7 +419,6 @@ class WarApp(tk.Tk):
                 highlightbackground=PLAYER_COLORS[i], highlightthickness=2)
 
 
-# ─── Run ──────────────────────────────────────────────────────────────────────
 
 if __name__ == '__main__':
     app = WarApp()
