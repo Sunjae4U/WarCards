@@ -1,7 +1,7 @@
 ```markdown
 # War Card Game
 
-A 4-player visual simulation of the classic War card game, built with Python and tkinter.
+A 4-player visual simulation of the classic War card game, built with Python, tkinter, and AI assistance.
 
 ## Table of Contents
 1. [About The Project](#about-the-project)
